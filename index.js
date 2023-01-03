@@ -1,3 +1,10 @@
+// This simple game could have been done in a few lines of code
+// using a "for loop" that generates a random number 1-6 and puts 
+// it in the end of the images path, since all their paths end with
+// a number (dice1, dice2, dice3), but due to a problem in VS Code  
+// with JS, it didn't recognize the paths, so I used switch statement
+
+
 // generating a random number 
 // from 1 to 6 for the first player
 let randomNumber1 = Math.round(Math.random() * 6);
