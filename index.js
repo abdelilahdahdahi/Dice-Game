@@ -1,60 +1,12 @@
-// This simple game could have been done in a few lines of code
-// using a "for loop" that generates a random number 1-6 and puts 
-// it in the end of the images path, since all their paths end with
-// a number (dice1, dice2, dice3), but due to a problem in VS Code  
-// with JS, it didn't recognize the paths, so I used switch statement
+// launching the dice for the 1st player
+let randomNumber1 = Math.round(Math.random() * 6); // generating a random number 0-6
+let randomDice1 = "/images/dice" + randomNumber1 + ".png";
+document.querySelector("#dadoPlayer1").setAttribute("src", randomDice1);
 
-
-// generating a random number 
-// from 1 to 6 for the first player
-let randomNumber1 = Math.round(Math.random() * 6);
-
-// generating another one for the second player
+// launching the dice for the 2nd player
 let randomNumber2 = Math.round(Math.random() * 6);
-
-// launching the dice for the player 1
-switch (randomNumber1) {
-    case 1:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice1.png");
-        break;
-    case 2:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice2.png");
-        break;
-    case 3:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice3.png");
-        break;
-    case 4:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice4.png");
-        break;
-    case 5:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice5.png");
-        break;
-    case 6:
-        document.querySelector("#dadoPlayer1").setAttribute("src", "images/dice6.png");
-        break;
-}
-
-// launching the dice for the player 2
-switch (randomNumber2) {
-    case 1:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice1.png");
-        break;
-    case 2:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice2.png");
-        break;
-    case 3:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice3.png");
-        break;
-    case 4:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice4.png");
-        break;
-    case 5:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice5.png");
-        break;
-    case 6:
-        document.querySelector("#dadoPlayer2").setAttribute("src", "images/dice6.png");
-        break;
-}
+let randomDice2 = "/images/dice" + randomNumber2 + ".png";
+document.querySelector("#dadoPlayer2").setAttribute("src", randomDice2);
 
 // declaring the winner
 if (randomNumber1 > randomNumber2) {
